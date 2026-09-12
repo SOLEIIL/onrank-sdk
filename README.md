@@ -59,5 +59,5 @@ external out-messages of the contracts; `topicOf(dest)` extracts the topic. See
 - Quote formulas are pinned to the on-chain `get_buy_quote` / `get_sell_quote` results of the live $RANK curve.
 - Builders refuse `minOut`/`minTon = 0`: no trade without slippage protection.
 
-Full protocol reference: [onrank.lol/integration/README.md](https://onrank.lol/integration/README.md) · [onrank.lol/developers](https://onrank.lol/developers).
+Full protocol reference: [onrank.lol/integration/README.md](https://onrank.lol/integration/README.md) · [onrank.lol/developers](https://onrank.lol/developers) · contracts: [onrank-contracts](https://github.com/SOLEIIL/onrank-contracts).
 MIT.
