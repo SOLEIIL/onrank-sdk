@@ -19,7 +19,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
   },
   "peerDependencies": {
     "@ton/core": ">=0.56.0"
@@ -41,5 +42,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/SOLEIIL/onrank-sdk"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://onrank.lol/developers",
+  "bugs": {
+    "url": "https://github.com/SOLEIIL/onrank-sdk/issues"
   }
 }
