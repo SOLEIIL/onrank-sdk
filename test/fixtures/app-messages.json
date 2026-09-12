@@ -1,0 +1,51 @@
+{
+  "generatedFrom": "app/src/lib/tx/messages.ts",
+  "generatedAt": "2026-09-12",
+  "constants": {
+    "Buy": 1129644034,
+    "SwapTonForCoin": 1347354625,
+    "AskToBurn": 1499400124,
+    "SellIntent": 1381433368,
+    "curveBuy": "150000000",
+    "poolSwapV2": "150000000",
+    "walletBurnV2": "160000000",
+    "margin": "30000000"
+  },
+  "messages": {
+    "curveBuy": {
+      "address": "EQCip5yieVqC2W0odHU6X_CHHcVljAZ_m0o0cReYgHRjdG4a",
+      "amount": "5150000000",
+      "payload": "te6cckEBAQEAEAAAG0NVAAISNFZ4mrze8BeyDrT2+Q=="
+    },
+    "poolBuyV2": {
+      "address": "EQB18IIqz56m9AAwNpX0Ai61_LNa4yquhT3QRNk4geiLwdhA",
+      "amount": "1150000000",
+      "payload": "te6cckEBAQEAEAAAG1BPAAESNFZ4mrze8BB4ysNl2A=="
+    },
+    "poolBuyV1": {
+      "address": "EQB18IIqz56m9AAwNpX0Ai61_LNa4yquhT3QRNk4geiLwdhA",
+      "amount": "1200000000",
+      "payload": "te6cckEBAQEAEAAAG1BPAAESNFZ4mrze8BB4ysNl2A=="
+    },
+    "sellV2": {
+      "address": "EQCpS9EiKrk0W7pCEybeKiCbzLL1b-CSTeiHHgVGKCQD5Mc1",
+      "amount": "190000000",
+      "payload": "te6cckEBAgEAQAABallfB7wSNFZ4mrze8HA41+pMaAAIAJQQUqVm6MOYS9SFZb/l2Sh6gNwUynB/DAzHOtpORpjFAQALUlcAGBY4TTLi1w=="
+    },
+    "sellV1": {
+      "address": "EQCpS9EiKrk0W7pCEybeKiCbzLL1b-CSTeiHHgVGKCQD5Mc1",
+      "amount": "150000000",
+      "payload": "te6cckEBAgEAQAABallfB7wSNFZ4mrze8HA41+pMaAAIAJQQUqVm6MOYS9SFZb/l2Sh6gNwUynB/DAzHOtpORpjFAQALUlcAGBY4TTLi1w=="
+    },
+    "poolSellV2": {
+      "address": "EQCpS9EiKrk0W7pCEybeKiCbzLL1b-CSTeiHHgVGKCQD5Mc1",
+      "amount": "190000000",
+      "payload": "te6cckEBAgEAOgABXllfB7wSNFZ4mrze8BKoAJQQUqVm6MOYS9SFZb/l2Sh6gNwUynB/DAzHOtpORpjFAQALUlcAGBA4+wsPMw=="
+    },
+    "poolSellV1": {
+      "address": "EQCpS9EiKrk0W7pCEybeKiCbzLL1b-CSTeiHHgVGKCQD5Mc1",
+      "amount": "280000000",
+      "payload": "te6cckEBAgEAYAABqg+KfqUSNFZ4mrze8BKoAOvhBFWfPU3oAGBtK+gEXWv5ZrXGVV0Ke6CJsnED0ReDABKCClSs3RhzCXqQrLf8uyUPUBuCmU4P4YGY51tJyNMYiBHhowEBAAtQTwACEDgfIg9E"
+    }
+  }
+}

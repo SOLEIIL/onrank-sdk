@@ -1,0 +1,45 @@
+{
+  "name": "@onrank/sdk",
+  "version": "0.1.0",
+  "description": "ONRANK (TON launchpad) integration SDK: on-chain quotes and unsigned TON Connect messages for buying and selling coins on the curve and the pool. No keys, no network required.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@ton/core": ">=0.56.0"
+  },
+  "devDependencies": {
+    "@ton/core": "^0.63.1",
+    "@ton/crypto": "^3.3.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "keywords": [
+    "ton",
+    "onrank",
+    "launchpad",
+    "bonding-curve",
+    "ton-connect",
+    "trading-bot"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SOLEIIL/onrank-sdk"
+  }
+}
