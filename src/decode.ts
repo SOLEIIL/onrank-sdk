@@ -6,9 +6,17 @@ import type { CurveState, PoolState } from "./quotes.js";
 
 function optAddress(r: TupleReader): string | null {
   const item = r.peek();
-  if (item.type === "null") {
+  // `null`, or an empty tuple (how some RPCs render TVM null), or an addr_none slice: no address
+  if (item.type === "null" || (item.type === "tuple" && item.items.length === 0)) {
     r.pop();
     return null;
+  }
+  if (item.type === "slice" || item.type === "cell") {
+    const s = item.cell.beginParse();
+    if (s.remainingBits < 267) {
+      r.pop();
+      return null;
+    }
   }
   return r.readAddress().toString();
 }

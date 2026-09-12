@@ -35,7 +35,12 @@ export function toncenterStackToTuple(stack: unknown[]): TupleItem[] {
     if (kind === "num") return { type: "int", value: BigInt(value as string) };
     if (kind === "cell" || kind === "slice" || kind === "builder") return { type: kind === "cell" ? "cell" : "slice", cell: Cell.fromBase64((value as { bytes: string }).bytes) };
     if (kind === "null") return { type: "null" };
-    if (kind === "list" || kind === "tuple") return { type: "tuple", items: toncenterStackToTuple(((value as { elements?: unknown[] }).elements ?? []) as unknown[]) };
+    if (kind === "list" || kind === "tuple") {
+      const elements = ((value as { elements?: unknown[] })?.elements ?? []) as unknown[];
+      // toncenter v2 renders TVM `null` (e.g. an unset `address?` such as a curve's `pool`) as an empty list
+      if (elements.length === 0) return { type: "null" };
+      return { type: "tuple", items: toncenterStackToTuple(elements) };
+    }
     throw new Error(`unknown stack item ${kind}`);
   });
 }

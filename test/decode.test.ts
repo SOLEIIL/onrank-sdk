@@ -38,6 +38,14 @@ describe("get-method stacks", () => {
     expect(d.virtualTon).toBe(0x11ed178d35d1n);
     expect(d.pool).toBeNull();
   });
+  it("toncenter v2 renders TVM null as an empty list (curve without pool) — the bug found by the 0.1.0 smoke test", () => {
+    const stack = [["num", "0x1"], ["num", "0x10"], ["num", "0x20"], ["num", "0x8"], ["num", "0x4"], ["list", { elements: [] }], ["cell", { bytes: beginCell().endCell().toBoc().toString("base64") }], ["cell", { bytes: beginCell().endCell().toBoc().toString("base64") }]];
+    const d = decodeCurveData(toncenterStackToTuple(stack));
+    expect(d.pool).toBeNull();
+    expect(d.virtualToken).toBe(0x20n);
+    // an addr_none slice is also "no address"
+    expect(decodeCurveData(toncenterStackToTuple([["num", "0x1"], ["num", "0x1"], ["num", "0x1"], ["num", "0x0"], ["num", "0x1"], ["cell", { bytes: beginCell().storeUint(0, 2).endCell().toBoc().toString("base64") }]])).pool).toBeNull();
+  });
   it("graduated curve carries the pool address", () => {
     const stack = [["num", "0x2"], ["num", "0x1"], ["num", "0x1"], ["num", "0x0"], ["num", "0x1"], ["cell", { bytes: beginCell().storeAddress(trader).endCell().toBoc().toString("base64") }]];
     expect(decodeCurveData(toncenterStackToTuple(stack)).pool).toBe(trader.toString());

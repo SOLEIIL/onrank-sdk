@@ -1,6 +1,6 @@
 {
   "name": "@onrank/sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ONRANK (TON launchpad) integration SDK: on-chain quotes and unsigned TON Connect messages for buying and selling coins on the curve and the pool. No keys, no network required.",
   "license": "MIT",
   "type": "module",
