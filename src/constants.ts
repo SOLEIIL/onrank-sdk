@@ -61,7 +61,7 @@ export const MAINNET = {
   factory: "EQB18IIqz56m9AAwNpX0Ai61_LNa4yquhT3QRNk4geiLwdhA",
   pot: "EQCpS9EiKrk0W7pCEybeKiCbzLL1b-CSTeiHHgVGKCQD5Mc1",
   potRelay: "EQBv-rQifdeTG6AMWw9OEp9x9YLEBGs__tkWj5sy8ulgiOFT",
-  minter: "EQBAUS2t-elNMrkdZtv7Tl1pMZhTJrZqdogyCK-2UxmjjPzu",
+  minter: "EQBxJR0SBPpr7H35SfZD9b2AZHLfX2SJyUYNMWNpXq3vvAYU",
   collection: "EQBKCClSs3RhzCXqQrLf8uyUPUBuCmU4P4YGY51tJyNMYgMe",
   buyback: "EQBtLFO9DvXI6WV0uraqVWu6qH8o7gQbk6Awfxg7Kj8Z_phO",
   usdt: "EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs",
@@ -79,7 +79,7 @@ export const CODE_HASH = {
   RewardVaultV2: "vzEyUk5gEDQxHIfokjDqvgmuwFsOQnnKwpyBrIVRE/A=",
   Pot: "lxv0tCBCh1oQk0f5oBU0KCTmebivPtMicSoSp5h4Phw=",
   PotRelay: "h7MamCDtM7iPXwEquvm5JaSgCAHLgf3EkVq8Y7Zz2tY=",
-  DeskMinter: "QdIxvaBs/3OE7xHOPy4bPP5SzHtMBriVW+TywiLifxA=",
+  DeskMinter: "9eaThD65MUwYDWixklg8EXyLE2LSKjE0YSY+KhN8PXg=",
   DeskCollection: "LHhgnY0QJjXpBWNkpYjjCJK1elxludK0gBHdLq4IYeU=",
   BuybackVault: "WXP9MVAA2AT/dITksu2ewZGJo9hdBlV7LAeG/s6C9Xo=",
 } as const;

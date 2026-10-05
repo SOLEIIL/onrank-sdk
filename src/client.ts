@@ -15,6 +15,10 @@ export type ApiCoin = {
   pool: string | null;
   version: LauncherVersion;
   sellOnly: boolean;
+  /** Legacy average execution price of the latest trade. */
+  lastPriceNano?: string | null;
+  /** Preferred current market spot for price/MCAP displays. */
+  spotPriceNano?: string | null;
   hidden?: boolean;
 };
 
