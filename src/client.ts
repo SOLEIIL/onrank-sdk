@@ -13,6 +13,8 @@ export type ApiCoin = {
   master: string;
   curve: string;
   pool: string | null;
+  /** Coins launched since 2026-10-05 graduate to a locked DeDust pool; set after graduation (the coin trades there). */
+  dedustPool?: string | null;
   version: LauncherVersion;
   sellOnly: boolean;
   /** Legacy average execution price of the latest trade. */
@@ -122,6 +124,9 @@ export class OnrankClient {
     const owner = typeof p.owner === "string" ? parseAddress(p.owner) : p.owner;
     const version: LauncherVersion = p.coin.version ?? 2;
     if (p.side === "buy" && p.coin.sellOnly) throw new Error("this coin is sell-only");
+    // graduated DeDust coins (launched since 2026-10-05) swap on DeDust, not on an ONRANK pool: the DeDust messages
+    // (PayNative / jetton transfer with PayJetton) are built by POST /api/v1/tx — use that endpoint for these coins
+    if (p.coin.dedustPool) throw new Error("this coin trades on its DeDust pool: build the message with POST /api/v1/tx");
     if (p.coin.pool) {
       const pool = parseAddress(p.coin.pool);
       if (version === 2) {

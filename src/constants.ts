@@ -64,6 +64,9 @@ export const MAINNET = {
   minter: "EQBxJR0SBPpr7H35SfZD9b2AZHLfX2SJyUYNMWNpXq3vvAYU",
   collection: "EQBKCClSs3RhzCXqQrLf8uyUPUBuCmU4P4YGY51tJyNMYgMe",
   buyback: "EQBtLFO9DvXI6WV0uraqVWu6qH8o7gQbk6Awfxg7Kj8Z_phO",
+  /** Public launches since 2026-10-05 (graduation to a locked DeDust pool). */
+  factoryDex: "EQAqiT8mgpzHsRQ6dcfMB5zOqdDicsll59tPVKOoY5xSX05Y",
+  gasStation: "EQCdG8p4dxN126sgk0b-_0P0DFuQ9npju9Eq6hzWqKGma5bt",
   usdt: "EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs",
   api: "https://onrank.lol",
 } as const;
@@ -82,6 +85,14 @@ export const CODE_HASH = {
   DeskMinter: "9eaThD65MUwYDWixklg8EXyLE2LSKjE0YSY+KhN8PXg=",
   DeskCollection: "LHhgnY0QJjXpBWNkpYjjCJK1elxludK0gBHdLq4IYeU=",
   BuybackVault: "WXP9MVAA2AT/dITksu2ewZGJo9hdBlV7LAeG/s6C9Xo=",
+  // launcher-dex (public launches since 2026-10-05)
+  FactoryDex3: "vCgj4/7SZyQJWuITanh7qb8L8uaKmkJ/r+CS6vnjda8=",
+  CurveDex2: "JQmaYwoR5eFLfn0KxffhMPZkGPkw0XUoFGnsrk+tu8M=",
+  GasStation: "u3BLYqRJfpcmBX1KceV7Gku/WwJXPdOMuvyPPGAnblk=",
+  CreatorFee: "58nQm1TTF93/WasUb27nGi7f06Qp8jquLtCvHGUHXMU=",
+  RewardMasterDex: "nYrRvKweQHE08AuI+3qHLCwUGuByiV0OGAhgLI/TUDE=",
+  RewardWalletDex: "4Wb+N/pAOREjAp2jlT1COdBvMm833i6wvF8HdmfAF+w=",
+  RewardVaultDex: "5itX4gie3tJMr29uUZYKLICBUzaZhAUiQTCQLe3T5WI=",
 } as const;
 
 /** Launcher family of a coin: v1 coins are sell-only and use a different pool sell path. */
